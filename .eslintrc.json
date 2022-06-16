@@ -1,3 +1,8 @@
 {
-  "extends": ["next/core-web-vitals", "google"]
+  "extends": ["next/core-web-vitals", "google"],
+  "rules": {
+     "require-jsdoc": "off",
+     "max-len": "off",
+     "indent": ["error", 4]
+  }
 }
