@@ -1,12 +1,19 @@
 import type {NextPage} from 'next';
-import {GlobalStyle} from '../styles/global';
+import {Header} from '../components/Header';
+import {Container, Content} from './styled';
 
 const Home: NextPage = () => {
     return (
-        <>
-            <h1>Hello World!</h1>
-            <GlobalStyle />
-        </>
+        <Container>
+            <div>
+                <Content>
+                    <Header />
+                </Content>
+            </div>
+            <div>
+                <Content>Content Right</Content>
+            </div>
+        </Container>
     );
 };
 
