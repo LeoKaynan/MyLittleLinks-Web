@@ -1,13 +1,6 @@
 import {createGlobalStyle} from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-    :root {
-        --primary: ${({theme}) => theme.colors.primary};
-        --darkBlue: #101529;
-        --softPink: #FC9B94;
-        --blue: #2181E8;
-    }
-
     * {
         margin: 0;
         padding: 0;
@@ -24,16 +17,16 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        background-color: var(--darkBlue);
+        background-color: ${({theme}) => theme.baseColors.blueDark};
     }
 
     body, input, textarea, button {
         font-family: 'Inter', sans-serif;
-        font-weight: 400;
+        font-weight: ${({theme}) => theme.fontWeight.regular};
     }
 
     h1, h2, h3, h4, h5, h6, strong {
-        font-weight: 600;
+        font-weight: ${({theme}) => theme.fontWeight.semiBold};
     }
 
     button {

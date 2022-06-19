@@ -1,11 +1,14 @@
 import type {AppProps} from 'next/app';
 import {ThemeProvider} from 'styled-components';
-import pinkTheme from '../styles/themes/pink';
+import {GlobalStyle} from '../styles/global';
+import {themeColor} from '../styles/themes';
+
 
 function MyApp({Component, pageProps}: AppProps) {
     return (
-        <ThemeProvider theme={pinkTheme}>
+        <ThemeProvider theme={themeColor('green')}>
             <Component {...pageProps} />
+            <GlobalStyle />
         </ThemeProvider>
     );
 }
